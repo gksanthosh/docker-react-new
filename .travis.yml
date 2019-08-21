@@ -6,4 +6,4 @@ before_install:
   - docker build -t sgk/docker-react-new -f Dockerfile.dev .
 
 script:
-  - docker run sgk/docker-react-new npm run test -- --coverage
+  - docker run -e CI=true sgk/docker-react-new npm run test
